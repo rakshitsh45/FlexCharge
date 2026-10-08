@@ -163,7 +163,7 @@ FlexCharge/
 │   ├── system_architecture.md          # 3-Stage Power Topology & Sizing Formulations
 │   ├── control_design_and_tuning.md    # SRF d-q Decoupling, Modulus & Symmetrical Optimum
 │   ├── ieee_compliance_analysis.md     # IEEE 519 THD Audit & IEEE 1547 Voltage Support
-│   └── resume_points.md                # STAR/XYZ Resume Points & Interview Talking Points
+│   └── technical_qa.md                 # Engineering Deep Dives & Technical FAQ
 ├── simulation/                         # Executable Simulation Models & Scripts
 │   ├── init_params.m                   # System Parameters, Electrical Ratings, PI Tuning
 │   ├── build_v2g_model.m               # Programmatic Simulink Builder (Clean SLX Generator)
