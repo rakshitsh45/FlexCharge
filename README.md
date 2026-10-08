@@ -192,7 +192,7 @@ FlexCharge/
 ### Step-by-Step Execution
 1. Clone the repository and navigate into the project directory:
    ```bash
-   git clone https://github.com/<your-username>/FlexCharge.git
+   git clone https://github.com/rakshitsh45/FlexCharge.git
    cd FlexCharge
    ```
 2. Open MATLAB and run the master simulation suite:
