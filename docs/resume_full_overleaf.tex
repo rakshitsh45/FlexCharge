@@ -1,0 +1,121 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[left=0.5in, right=0.5in, top=0.45in, bottom=0.45in]{geometry}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+% -----------------------------------------------------------------------------
+% HEADER
+% -----------------------------------------------------------------------------
+\begin{minipage}[c]{0.12\textwidth}
+    % Replace with your local logo path or iit_jammu_logo.png
+    \rule{1.2cm}{1.2cm} 
+\end{minipage}
+\begin{minipage}[c]{0.50\textwidth}
+    {\Large \textbf{RAKSHIT}} \\
+    Roll No.: 2025UEE0160 \\
+    Electrical Engineering \\
+    \textbf{Indian Institute Of Technology, Jammu}
+\end{minipage}
+\begin{minipage}[c]{0.36\textwidth}
+    \raggedleft
+    +91-8219672400 \\
+    \href{mailto:2025uee0160@iitjammu.ac.in}{2025uee0160@iitjammu.ac.in} \\
+    \href{https://github.com/rakshitsh45}{Github} \textbar\ Website \\
+    \href{https://linkedin.com/in/}{LinkedIn}
+\end{minipage}
+
+\vspace{8pt}
+
+% -----------------------------------------------------------------------------
+% EDUCATION
+% -----------------------------------------------------------------------------
+{\large \textbf{EDUCATION}}
+\vspace{-4pt}
+\hrule
+\vspace{4pt}
+
+\begin{tabularx}{\textwidth}{|X|X|c|c|}
+\hline
+\textbf{Degree/Certificate} & \textbf{Institute/Board} & \textbf{CGPA/Percentage} & \textbf{Year of Passing} \\
+\hline
+B.Tech (EE) & Indian Institute of Technology, Jammu & 7.07 (Current) & 2026 \\
+\hline
+12th Standard & Central Board of Secondary Education & 92.6\% & 2025 \\
+\hline
+10th Standard & Central Board of Secondary Education & 86.2\% & 2023 \\
+\hline
+\end{tabularx}
+
+\vspace{8pt}
+
+% -----------------------------------------------------------------------------
+% EXPERIENCE
+% -----------------------------------------------------------------------------
+{\large \textbf{EXPERIENCE}}
+\vspace{-4pt}
+\hrule
+\vspace{4pt}
+
+\textbf{Himachal Pradesh State Electricity Board Ltd. (HPSEBL) \textbar\ Killar, HP} \hfill \textit{May 2026 -- June 2026} \\
+\textit{Industrial Trainee}
+\begin{itemize}[leftmargin=15pt, itemsep=1pt, topsep=2pt]
+    \item \textbf{Drafted comprehensive Single Line Diagrams (SLDs)} for a 1 MW Solar Power Plant in Dhanwas and a 3x100 KW Micro Hydroelectric Project (MHEP).
+    \item \textbf{Monitored live operations} at the 300 KW MHEP Killar facility during a direct on-site deputation.
+    \item \textbf{Analyzed the layout and functioning} of High Tension (H.T.) lines, Low Tension (L.T.) lines, and regional electrical Sub-Stations.
+\end{itemize}
+
+\vspace{6pt}
+
+% -----------------------------------------------------------------------------
+% PROJECTS
+% -----------------------------------------------------------------------------
+{\large \textbf{PROJECTS}}
+\vspace{-4pt}
+\hrule
+\vspace{4pt}
+
+\begin{itemize}[leftmargin=12pt, itemsep=3pt, topsep=2pt, label=\textbullet]
+    \item \textbf{FlexCharge: Level-3 DC Fast Charging Station with V2G Grid Optimization} \hfill \textit{Oct. 2026} \\
+    \textit{Modeled a 50 kW bidirectional EV charging station with active grid support and 800V DC bus stabilization.} \hfill \href{https://github.com/rakshitsh45/FlexCharge}{\textit{Github}}
+    \begin{itemize}[leftmargin=15pt, itemsep=1pt, topsep=1pt, label=-]
+        \item \textbf{Tools \& technologies used}: MATLAB, Simulink, Simscape Electrical, Synchronous $d$-$q$ Vector Control, SRF-PLL, IEEE 519-2022, IEEE 1547-2018.
+        \item \textbf{Architected a 3-stage power conversion structure} consisting of a 3-phase Active Front End (AFE) PWM converter, a regulated 800V common DC bus ($C_{dc} = 4700\ \mu\text{F}$), and a bidirectional Buck-Boost DC-DC stage connected to a 60 kWh Li-Ion battery pack.
+        \item \textbf{Designed a dual-loop decoupled $d$-$q$ vector controller} with Symmetrical \& Modulus Optimum PI tuning, achieving \textbf{Unity Power Factor ($\cos\phi = 1.000$)} in G2V charging and maintaining common DC bus voltage deviation within $\pm 0.18\%$ during 50 kW step load transients.
+        \item \textbf{Engineered autonomous grid voltage sag compensation (IEEE 1547)} injecting \textbf{$+17.89$ kVAR reactive power} within 1.8 ms of a 12\% distribution grid sag, and implemented \textbf{V2G peak shaving} delivering 22.2 kW active power with \textbf{1.71\% THD} (IEEE 519 compliant).
+    \end{itemize}
+\end{itemize}
+
+\vspace{6pt}
+
+% -----------------------------------------------------------------------------
+% TECHNICAL SKILLS
+% -----------------------------------------------------------------------------
+{\large \textbf{TECHNICAL SKILLS}}
+\vspace{-4pt}
+\hrule
+\vspace{4pt}
+
+\begin{itemize}[leftmargin=12pt, itemsep=2pt, topsep=2pt, label=\textbullet]
+    \item \textbf{Programming}: C, C++
+    \item \textbf{Simulation \& Analysis}: MATLAB, Simulink, Simscape Electrical, Stateflow
+    \item \textbf{Power Electronics \& Control}: Synchronous $d$-$q$ Vector Control, SRF-PLL, Active Front End (AFE), Bidirectional DC-DC Converters, CC-CV Battery Charging (BMS)
+    \item \textbf{PCB Design}: KiCad, Schematic Capture, PCB Layout, Routing, Design Rule Check (DRC)
+    \item \textbf{Embedded Systems}: Embedded C, Arduino Uno, Hardware Interfacing
+\end{itemize}
+
+\end{document}
