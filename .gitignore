@@ -1,0 +1,18 @@
+# MATLAB & Simulink
+slprj/
+*.slxc
+*.asv
+*.autosave
+*.m~
+*~
+*.log
+*.tmp
+
+# MATLAB code generation
+codegen/
+*.mex*
+
+# OS artifacts
+Thumbs.db
+.DS_Store
+*.swp
