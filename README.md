@@ -12,7 +12,7 @@ An industrial-grade MATLAB/Simulink simulation and dynamic control architecture 
 
 ## 1. Engineering Motivation & Industry Relevance
 
-With the rapid deployment of high-power electric vehicle fleets (e.g., Tata Motors, Ather Energy, Ola Electric), uncoordinated fast charging introduces severe distribution grid stress, localized voltage sags, and transformer overloading. Utilities such as **Tata Power, BESCOM, and National Grid** require modern DC fast chargers to act as **flexible, grid-interactive distributed energy resources (DERs)**.
+With the rapid deployment of high-power electric vehicle fleets and megawatt-scale commercial charging hubs, uncoordinated fast charging introduces severe distribution grid stress, localized voltage sags, and substation transformer overloading. Distribution System Operators (DSOs) and modern electrical utilities require high-power DC fast-charging stations to act as **flexible, grid-interactive Distributed Energy Resources (DERs)** capable of autonomous power quality support.
 
 **FlexCharge** addresses this challenge by providing:
 1. **Unity Power Factor ($\cos\phi = 1.000$)** active rectification during high-rate G2V charging.

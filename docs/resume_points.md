@@ -1,6 +1,6 @@
 # High-Impact Resume Bullet Points & Interview Talking Guide
 
-> **Instructions for Use**: Copy and customize these bullet points for your resume, LinkedIn experience section, or project portfolio. Tailored for Tier-1 EV OEMs (**Ather, Ola Electric, Tesla**), utilities (**Tata Power, BESCOM, National Grid**), and power semiconductor firms (**Texas Instruments, Infineon, STMicroelectronics**).
+> **Instructions for Use**: Copy and customize these bullet points for your resume, LinkedIn experience section, or project portfolio. Tailored for Tier-1 EV OEMs, Power Utilities, Charging Station Infrastructure Providers, and Power Semiconductor firms.
 
 ---
 
