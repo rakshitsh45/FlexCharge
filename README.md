@@ -2,8 +2,8 @@
 
 [![MATLAB](https://img.shields.io/badge/MATLAB-R2026a-blue.svg)](https://www.mathworks.com/products/matlab.html)
 [![Simulink](https://img.shields.io/badge/Simulink-Verified-orange.svg)](https://www.mathworks.com/products/simulink.html)
-[![IEEE 519-2022](https://img.shields.io/badge/IEEE%20519--2022-Compliant%20(THD%201.71%25)-brightgreen.svg)](#power-quality-audit)
-[![IEEE 1547-2018](https://img.shields.io/badge/IEEE%201547--2018-Grid%20Support-brightgreen.svg)](#interval-2-grid-stress--voltage-sag-support)
+[![IEEE 519-2022](https://img.shields.io/badge/IEEE%20519--2022-Compliant%20(THD%201.71%25)-brightgreen.svg)](#power-quality--harmonic-spectrum-ieee-519-2022)
+[![IEEE 1547-2018](https://img.shields.io/badge/IEEE%201547--2018-Grid%20Support-brightgreen.svg)](docs/ieee_compliance_analysis.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 An industrial-grade MATLAB/Simulink simulation and dynamic control architecture of a **50 kW Level-3 DC Fast Charging Station** connected to a 3-phase distribution grid. The station incorporates bidirectional power flow (**G2V: Grid-to-Vehicle** fast charging and **V2G: Vehicle-to-Grid** peak shaving), common 800V DC bus stabilization, dynamic reactive power voltage sag compensation, and strict harmonic mitigation complying with **IEEE 519-2022** and **IEEE 1547-2018**.
