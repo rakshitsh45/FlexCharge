@@ -64,15 +64,15 @@ function plot_results(mat_file)
     plot(t, res.P_grid / 1e3, 'Color', c_blue, 'LineWidth', 1.6, 'DisplayName', 'Active Power P (kW)');
     hold on;
     plot(t, res.Q_grid / 1e3, 'Color', c_purple, 'LineWidth', 1.6, 'DisplayName', 'Reactive Power Q (kVAR)');
-    yline(0, ':k', 'LineWidth', 1.0);
+    yline(0, ':k', 'LineWidth', 1.0, 'HandleVisibility', 'off');
     ylabel('Grid Power (kW / kVAR)', 'FontWeight', 'bold');
     title('Active Front End (AFE) Power Flow: G2V (Rectifying) vs V2G (Inverting)', 'FontWeight', 'bold', 'FontSize', 11);
     legend('Location', 'northeast');
     grid on;
     xlim([0, 10]);
     ylim([-35, 35]);
-    xline(3.5, '--k', 'LineWidth', 1.2);
-    xline(6.5, '--k', 'LineWidth', 1.2);
+    xline(3.5, '--k', 'LineWidth', 1.2, 'HandleVisibility', 'off');
+    xline(6.5, '--k', 'LineWidth', 1.2, 'HandleVisibility', 'off');
 
     % Subplot 3: Common 800V DC Bus Voltage Regulation
     subplot(4, 1, 3);
@@ -85,8 +85,8 @@ function plot_results(mat_file)
     legend('Location', 'northeast');
     grid on;
     xlim([0, 10]);
-    xline(3.5, '--k', 'LineWidth', 1.2);
-    xline(6.5, '--k', 'LineWidth', 1.2);
+    xline(3.5, '--k', 'LineWidth', 1.2, 'HandleVisibility', 'off');
+    xline(6.5, '--k', 'LineWidth', 1.2, 'HandleVisibility', 'off');
 
     % Subplot 4: EV Battery Port (Current & SoC)
     subplot(4, 1, 4);
@@ -105,8 +105,8 @@ function plot_results(mat_file)
     legend('Location', 'northwest');
     grid on;
     xlim([0, 10]);
-    xline(3.5, '--k', 'LineWidth', 1.2);
-    xline(6.5, '--k', 'LineWidth', 1.2);
+    xline(3.5, '--k', 'LineWidth', 1.2, 'HandleVisibility', 'off');
+    xline(6.5, '--k', 'LineWidth', 1.2, 'HandleVisibility', 'off');
 
     exportgraphics(h1, fullfile(out_dir, 'flexcharge_system_performance.png'), 'Resolution', 300);
     close(h1);
@@ -196,6 +196,8 @@ function plot_results(mat_file)
         harm_pct(h) = (P1(idxh) / I_fund) * 100.0;
     end
 
+    thd_val = sqrt(sum(harm_pct(2:50).^2));
+
     % Bar plot of harmonics 2 to 25
     harm_orders = 2:25;
     harm_values = harm_pct(harm_orders);
@@ -204,7 +206,7 @@ function plot_results(mat_file)
     hold on;
     % IEEE 519 limit line: Individual harmonics < 4.0%, total THD < 5.0%
     yline(4.0, '--r', 'IEEE 519 Individual Limit (4.0%)', 'LineWidth', 1.5);
-    yline(1.85, '-g', 'Measured V2G THD (1.85%)', 'LineWidth', 1.5);
+    yline(thd_val, '-g', sprintf('Measured V2G THD (%.2f%%)', thd_val), 'LineWidth', 1.5);
 
     xlabel('Harmonic Order (h)', 'FontWeight', 'bold');
     ylabel('Current Magnitude (% of Fundamental)', 'FontWeight', 'bold');
@@ -212,7 +214,7 @@ function plot_results(mat_file)
     xlim([1.5, 25.5]);
     ylim([0, 5.0]);
     grid on;
-    legend({'Harmonic Content', 'IEEE 519 Individual Limit (4.0%)', 'Total Current THD = 1.85% (Compliant)'}, 'Location', 'northeast');
+    legend({'Harmonic Content', 'IEEE 519 Individual Limit (4.0%)', sprintf('Total Current THD = %.2f%% (Compliant)', thd_val)}, 'Location', 'northeast');
 
     exportgraphics(h3, fullfile(out_dir, 'harmonic_spectrum_ieee519.png'), 'Resolution', 300);
     close(h3);
